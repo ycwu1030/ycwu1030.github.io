@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Yongcheng Wu&#39;s Blog</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://ycwu1030.github.io/"/>
+  <updated>2019-09-12T19:15:42.349Z</updated>
+  <id>https://ycwu1030.github.io/</id>
+  
+  <author>
+    <name>Yongcheng Wu</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MarkDown Use Guide</title>
+    <link href="https://ycwu1030.github.io/2019/09/12/MarkDown-Use-Guide/"/>
+    <id>https://ycwu1030.github.io/2019/09/12/MarkDown-Use-Guide/</id>
+    <published>2019-09-12T18:42:23.000Z</published>
+    <updated>2019-09-12T19:15:42.349Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Title&quot;&gt;&lt;a href=&quot;#Title&quot; class=&quot;headerlink&quot; title=&quot;Title&quot;&gt;&lt;/a&gt;Title&lt;/h1&gt;&lt;h1 id=&quot;1st-Head&quot;&gt;&lt;a href=&quot;#1st-Head&quot; class=&quot;headerlink&quot; title=&quot;1st Head&quot;&gt;&lt;/a&gt;1st Head&lt;/h1&gt;&lt;h2 id=&quot;2nd-Head&quot;&gt;&lt;a href=&quot;#2nd-Head&quot; class=&quot;headerlink&quot; title=&quot;2nd Head&quot;&gt;&lt;/a&gt;2nd Head&lt;/h2&gt;&lt;h3 id=&quot;3rd-Head&quot;&gt;&lt;a href=&quot;#3rd-Head&quot; class=&quot;headerlink&quot; title=&quot;3rd Head&quot;&gt;&lt;/a&gt;3rd Head&lt;/h3&gt;&lt;h4 id=&quot;etc&quot;&gt;&lt;a href=&quot;#etc&quot; class=&quot;headerlink&quot; title=&quot;etc.&quot;&gt;&lt;/a&gt;etc.&lt;/h4&gt;&lt;hr&gt;&lt;h1 id=&quot;List&quot;&gt;&lt;a href=&quot;#List&quot; class=&quot;headerlink&quot; title=&quot;List&quot;&gt;&lt;/a&gt;List&lt;/h1&gt;&lt;h2 id=&quot;Orderless-List&quot;&gt;&lt;a href=&quot;#Orderless-List&quot; class=&quot;headerlink&quot; title=&quot;Orderless List&quot;&gt;&lt;/a&gt;Orderless List&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Item 1&lt;/li&gt;
+&lt;li&gt;Item 2&lt;/li&gt;
+&lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;&lt;h2 id=&quot;Ordered-List&quot;&gt;&lt;a href=&quot;#Ordered-List&quot; class=&quot;headerlink&quot; title=&quot;Ordered List&quot;&gt;&lt;/a&gt;Ordered List&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;Item 1&lt;/li&gt;
+&lt;li&gt;Item 2&lt;/li&gt;
+&lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ol&gt;&lt;hr&gt;&lt;h1 id=&quot;Link-Picture-and-Quotation&quot;&gt;&lt;a href=&quot;#Link-Picture-and-Quotation&quot; class=&quot;headerlink&quot; title=&quot;Link, Picture and Quotation&quot;&gt;&lt;/a&gt;Link, Picture and Quotation&lt;/h1&gt;&lt;h2 id=&quot;Hyper-Link&quot;&gt;&lt;a href=&quot;#Hyper-Link&quot; class=&quot;headerlink&quot; title=&quot;Hyper Link&quot;&gt;&lt;/a&gt;Hyper Link&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1908.03607&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;arXiv:1908.03607&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="MarkDown" scheme="https://ycwu1030.github.io/categories/MarkDown/"/>
+    
+    
+      <category term="MarkDown" scheme="https://ycwu1030.github.io/tags/MarkDown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://ycwu1030.github.io/2019/09/12/hello-world/"/>
+    <id>https://ycwu1030.github.io/2019/09/12/hello-world/</id>
+    <published>2019-09-12T18:31:42.323Z</published>
+    <updated>2019-09-12T18:31:42.324Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
