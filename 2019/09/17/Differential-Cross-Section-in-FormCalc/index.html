@@ -56,18 +56,18 @@
   };
 </script>
 
-  <meta name="description" content="Version of FormCalc">
+  <meta name="description" content="Updates on 2019-09-22">
 <meta name="keywords" content="FormCalc,Trick">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Differential Cross Section in FormCalc">
 <meta property="og:url" content="https://ycwu1030.github.io/2019/09/17/Differential-Cross-Section-in-FormCalc/index.html">
 <meta property="og:site_name" content="Yongcheng Wu&#39;s Blog">
-<meta property="og:description" content="Version of FormCalc">
+<meta property="og:description" content="Updates on 2019-09-22">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-17T19:11:21.753Z">
+<meta property="og:updated_time" content="2019-09-22T20:52:48.360Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Differential Cross Section in FormCalc">
-<meta name="twitter:description" content="Version of FormCalc">
+<meta name="twitter:description" content="Updates on 2019-09-22">
   <link rel="canonical" href="https://ycwu1030.github.io/2019/09/17/Differential-Cross-Section-in-FormCalc/">
 
 
@@ -269,11 +269,19 @@
                 
               
 
-              <time title="Created: 2019-09-17 14:29:50 / Modified: 15:11:21" itemprop="dateCreated datePublished" datetime="2019-09-17T14:29:50-04:00">2019-09-17</time>
+              <time title="Created: 2019-09-17 14:29:50" itemprop="dateCreated datePublished" datetime="2019-09-17T14:29:50-04:00">2019-09-17</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-09-22 16:52:48" itemprop="dateModified" datetime="2019-09-22T16:52:48-04:00">2019-09-22</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -308,7 +316,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="version-of-formcalc">Version of FormCalc</h1><a id="more"></a>
+        <h1 id="updates-on-2019-09-22">Updates on 2019-09-22</h1><a id="more"></a>
+<p>Afterwards, we checked the manual more carefully. We find the true usage of <code>FCHSELN</code> and <code>FCHSELEPS</code> which actually has nothing to do with the steps in differential cross section. So what I was talking about in the following is nonsense. The true meaning of these two environment variables is that they control the behavior that the program no longer probe some helicity combination with too small contributions. In our case, the reason that we will have the problem in differential cross section calculations is that our process is somehow different and we are look at one of the not dominant helicity combinations. I'll check this with more detailed calculation.</p>
+<h1 id="version-of-formcalc">Version of FormCalc</h1>
 <p>9.6.0</p>
 <h1 id="calculation-of-the-differential-cross-section-in-formcalc">Calculation of the Differential Cross Section in FormCalc</h1>
 <p>When using FeynArt/FormCalc, sometime, we will first generate the amplitude/matrix element inside Mathematica. Then we will dump the formula into Fortran code to do the numerical calculation.</p>
@@ -450,7 +460,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#version-of-formcalc"><span class="nav-number">1.</span> <span class="nav-text">Version of FormCalc</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#calculation-of-the-differential-cross-section-in-formcalc"><span class="nav-number">2.</span> <span class="nav-text">Calculation of the Differential Cross Section in FormCalc</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#the-problem"><span class="nav-number">3.</span> <span class="nav-text">The Problem</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#solution"><span class="nav-number">4.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#note"><span class="nav-number">5.</span> <span class="nav-text">Note</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#updates-on-2019-09-22"><span class="nav-number">1.</span> <span class="nav-text">Updates on 2019-09-22</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#version-of-formcalc"><span class="nav-number">2.</span> <span class="nav-text">Version of FormCalc</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#calculation-of-the-differential-cross-section-in-formcalc"><span class="nav-number">3.</span> <span class="nav-text">Calculation of the Differential Cross Section in FormCalc</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#the-problem"><span class="nav-number">4.</span> <span class="nav-text">The Problem</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#solution"><span class="nav-number">5.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#note"><span class="nav-number">6.</span> <span class="nav-text">Note</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
