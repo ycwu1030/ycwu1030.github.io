@@ -56,17 +56,22 @@
   };
 </script>
 
-  <meta name="description" content="Life in Physics">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yongcheng Wu&#39;s Blog">
-<meta property="og:url" content="https://ycwu1030.github.io/archives/index.html">
+  <meta name="description" content="The hierarchy of pyplot (plt), ax, and figure">
+<meta name="keywords" content="Matplotlib">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Difference between `plt` `ax` and `figure` in Matplotlib">
+<meta property="og:url" content="https://ycwu1030.github.io/2019/11/24/Matplotlib-plt-ax-figure/index.html">
 <meta property="og:site_name" content="Yongcheng Wu&#39;s Blog">
-<meta property="og:description" content="Life in Physics">
+<meta property="og:description" content="The hierarchy of pyplot (plt), ax, and figure">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://ycwu1030.github.io/uploads/matplotlib_ax_figure.jpg">
+<meta property="og:image" content="https://ycwu1030.github.io/uploads/matplotlib_objects.jpg">
+<meta property="og:updated_time" content="2019-11-24T10:08:59.367Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yongcheng Wu&#39;s Blog">
-<meta name="twitter:description" content="Life in Physics">
-  <link rel="canonical" href="https://ycwu1030.github.io/archives/">
+<meta name="twitter:title" content="Difference between `plt` `ax` and `figure` in Matplotlib">
+<meta name="twitter:description" content="The hierarchy of pyplot (plt), ax, and figure">
+<meta name="twitter:image" content="https://ycwu1030.github.io/uploads/matplotlib_ax_figure.jpg">
+  <link rel="canonical" href="https://ycwu1030.github.io/2019/11/24/Matplotlib-plt-ax-figure/">
 
 
 <script id="page-configurations">
@@ -74,13 +79,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
+    isPost: true,
     isPage: false,
-    isArchive: true
+    isArchive: false
   };
 </script>
 
-  <title>Archive | Yongcheng Wu's Blog</title>
+  <title>Difference between `plt` `ax` and `figure` in Matplotlib | Yongcheng Wu's Blog</title>
   
 
 
@@ -230,180 +235,189 @@
         <div class="content-wrap">
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        
-        
-        
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://ycwu1030.github.io/2019/11/24/Matplotlib-plt-ax-figure/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yongcheng Wu">
+      <meta itemprop="description" content="Life in Physics">
+      <meta itemprop="image" content="/images/ycwu.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yongcheng Wu's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Difference between `plt` `ax` and `figure` in Matplotlib
+
           
-        
-        <span class="collection-header">Um..! 4 posts in total. Keep on posting.</span>
-      </div>
-      
+        </h1>
 
-      
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
 
-  
-  
+              
+                
+              
 
-  
+              <time title="Created: 2019-11-24 17:16:46 / Modified: 18:08:59" itemprop="dateCreated datePublished" datetime="2019-11-24T17:16:46+08:00">2019-11-24</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Coding/" itemprop="url" rel="index"><span itemprop="name">Coding</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
     
-    <div class="collection-year">
-      <h1 class="collection-header">2019</h1>
-    </div>
-  
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/11/24/Matplotlib-plt-ax-figure/" itemprop="url">
-            <span itemprop="name">Difference between `plt` `ax` and `figure` in Matplotlib</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-11-24T17:16:46+08:00"
-              content="2019-11-24">
-          11-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/17/Differential-Cross-Section-in-FormCalc/" itemprop="url">
-            <span itemprop="name">Differential Cross Section in FormCalc</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-17T14:29:50+08:00"
-              content="2019-09-17">
-          09-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/13/hello-world/" itemprop="url">
-            <span itemprop="name">Hello World</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-13T02:31:42+08:00"
-              content="2019-09-13">
-          09-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/12/MarkDown-Use-Guide/" itemprop="url">
-            <span itemprop="name">MarkDown Use Guide</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-12T14:42:23+08:00"
-              content="2019-09-12">
-          09-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+      
+        <h1 id="the-hierarchy-of-pyplot-plt-ax-and-figure">The hierarchy of pyplot (plt), ax, and figure</h1><a id="more"></a>
+<p>The plt is higher level api. In order to finely control the detail of a plot, it is better to use ax and/or figure instead.</p>
+<p><img src="/uploads/matplotlib_ax_figure.jpg"></p>
+<ul>
+<li>figure:
+<ul>
+<li>Kind of the canvas</li>
+</ul></li>
+<li>axes:
+<ul>
+<li>Which is definitely not only the axis in the plot</li>
+<li>Include any objects in the plots</li>
+<li>Contain anything we need to modify the detail of the plot</li>
+</ul></li>
+<li>axis:
+<ul>
+<li><code>ax.xaxis</code> and <code>ax.yaxis</code> the axis in the plot</li>
+</ul></li>
+</ul>
+<h1 id="some-objects-in-the-plots">Some objects in the Plots:</h1>
+<p><img src="/uploads/matplotlib_objects.jpg"></p>
 
     </div>
+
+    
+    
+    
+        
+      
+        <div id="reward-container">
+  <div>Thanks for Your Supports.</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechat.jpeg" alt="Yongcheng Wu WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/Alipay.jpeg" alt="Yongcheng Wu Alipay">
+        <p>Alipay</p>
+      </div>
+
+  </div>
+</div>
+
+      
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Yongcheng Wu</li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="https://ycwu1030.github.io/2019/11/24/Matplotlib-plt-ax-figure/" title="Difference between `plt` `ax` and `figure` in Matplotlib">https://ycwu1030.github.io/2019/11/24/Matplotlib-plt-ax-figure/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/en" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.</li>
+</ul>
+</div>
+
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/Matplotlib/" rel="tag"># Matplotlib</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/09/17/Differential-Cross-Section-in-FormCalc/" rel="next" title="Differential Cross Section in FormCalc">
+                  <i class="fa fa-chevron-left"></i> Differential Cross Section in FormCalc
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
   </div>
   
   
   
+  </article>
 
-  
-
+  </div>
 
 
           </div>
@@ -422,6 +436,11 @@
 
   <aside class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -434,6 +453,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#the-hierarchy-of-pyplot-plt-ax-and-figure"><span class="nav-number">1.</span> <span class="nav-text">The hierarchy of pyplot (plt), ax, and figure</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#some-objects-in-the-plots"><span class="nav-number">2.</span> <span class="nav-text">Some objects in the Plots:</span></a></li></ol></div>
+        
       </div>
       <!--/noindex-->
 
