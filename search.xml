@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Difference between `plt` `ax` and `figure` in Matplotlib</title>
+    <url>/2019/11/24/Matplotlib-plt-ax-figure/</url>
+    <content><![CDATA[<h1 id="the-hierarchy-of-pyplot-plt-ax-and-figure">The hierarchy of pyplot (plt), ax, and figure</h1><a id="more"></a>
+<p>The plt is higher level api. In order to finely control the detail of a plot, it is better to use ax and/or figure instead.</p>
+<p><img src="/uploads/matplotlib_ax_figure.jpg"></p>
+<ul>
+<li>figure:
+<ul>
+<li>Kind of the canvas</li>
+</ul></li>
+<li>axes:
+<ul>
+<li>Which is definitely not only the axis in the plot</li>
+<li>Include any objects in the plots</li>
+<li>Contain anything we need to modify the detail of the plot</li>
+</ul></li>
+<li>axis:
+<ul>
+<li><code>ax.xaxis</code> and <code>ax.yaxis</code> the axis in the plot</li>
+</ul></li>
+</ul>
+<h1 id="some-objects-in-the-plots">Some objects in the Plots:</h1>
+<p><img src="/uploads/matplotlib_objects.jpg"></p>
+]]></content>
+      <categories>
+        <category>Coding</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Matplotlib</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Differential Cross Section in FormCalc</title>
+    <url>/2019/09/17/Differential-Cross-Section-in-FormCalc/</url>
+    <content><![CDATA[<h1 id="updates-on-2019-09-22">Updates on 2019-09-22</h1><a id="more"></a>
+<p>Afterwards, we checked the manual more carefully. We find the true usage of <code>FCHSELN</code> and <code>FCHSELEPS</code> which actually has nothing to do with the steps in differential cross section. So what I was talking about in the following is nonsense. The true meaning of these two environment variables is that they control the behavior that the program no longer probe some helicity combination with too small contributions. In our case, the reason that we will have the problem in differential cross section calculations is that our process is somehow different and we are look at one of the not dominant helicity combinations. I'll check this with more detailed calculation.</p>
+<h1 id="version-of-formcalc">Version of FormCalc</h1>
+<p>9.6.0</p>
+<h1 id="calculation-of-the-differential-cross-section-in-formcalc">Calculation of the Differential Cross Section in FormCalc</h1>
+<p>When using FeynArt/FormCalc, sometime, we will first generate the amplitude/matrix element inside Mathematica. Then we will dump the formula into Fortran code to do the numerical calculation.</p>
+<p>Usually, there will be no problem. You can calculate the total cross section at some <span class="math inline">\(\sqrt{s}\)</span> by evoking:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./run uuuu sqrts,to,step</span><br></pre></td></tr></table></figure>
+<p>or differential cross section (for <span class="math inline">\(2\to2\)</span> process, it is <span class="math inline">\(\frac{d\sigma}{dc_\theta}\)</span>) by</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./run uuuu sqrts</span><br></pre></td></tr></table></figure>
+<p>Inside <code>run.F</code>, you can find the steps of <span class="math inline">\(c_\theta\)</span></p>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">#define COSTH1CUT <span class="number">.01D0</span></span><br><span class="line">#ifdef DEBUG</span><br><span class="line">#define XCOSTH1STEP <span class="number">1</span>/<span class="number">3D0</span></span><br><span class="line">#<span class="keyword">else</span></span><br><span class="line">#define XCOSTH1STEP <span class="number">.02D0</span></span><br><span class="line">#<span class="keyword">endif</span></span><br></pre></td></tr></table></figure>
+<p>Which defines the step is 1/3 in debug mode or 0.02 otherwise. The <code>#define COSTH1CUT .01D0</code> defines the cut at <span class="math inline">\(c_\theta\)</span> such that the range is <span class="math inline">\(c_\theta\in[-1+0.01, 1-0.01]\)</span>.</p>
+<h1 id="the-problem">The Problem</h1>
+<p>The problem appears when we want to do a more detailed calculation of the differential cross section, i.e. we want a much smaller step (more sample points).</p>
+<p>By default, the maximum number of sample points is 50 which means if you set <code>#define XCOSTH1STEP 1/100D0</code>, only first 50 points will have reasonable results. The results for other points will either be 0 or some other non-sense value.</p>
+<h1 id="solution">Solution</h1>
+<p>The maximum number is controlled by an environment variable <code>FCHSELN</code>. The default value is 50. If you want to increase the sample points, you need to set this environment variable before running the program.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> FCHSELN=1000; ./run uuuu sqrts</span><br></pre></td></tr></table></figure>
+<h1 id="note">Note</h1>
+<p>There is another environment variable <code>FCHSELEPS</code>, which might have similar usage.</p>
+]]></content>
+      <categories>
+        <category>Coding</category>
+        <category>Physics</category>
+      </categories>
+      <tags>
+        <tag>FormCalc</tag>
+        <tag>Trick</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MarkDown Use Guide</title>
+    <url>/2019/09/12/MarkDown-Use-Guide/</url>
+    <content><![CDATA[<h1 id="title">Title</h1><h1 id="st-head">1st Head</h1><a id="more"></a>
+
+<h2 id="nd-head">2nd Head</h2>
+<h3 id="rd-head">3rd Head</h3>
+<h4 id="etc.">etc.</h4>
+<hr>
+<h1 id="list">List</h1>
+<h2 id="orderless-list">Orderless List</h2>
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+</ul>
+<h2 id="ordered-list">Ordered List</h2>
+<ol type="1">
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+</ol>
+<hr>
+<h1 id="link-picture-and-quotation">Link, Picture and Quotation</h1>
+<h2 id="hyper-link">Hyper Link</h2>
+<p><a href="https://arxiv.org/abs/1908.03607" target="_blank" rel="noopener">arXiv:1908.03607</a></p>
+<h2 id="picture-from-outside">Picture from outside</h2>
+<figure>
+<img src="https://i.redd.it/866vvkcpzn301.jpg" alt><figcaption>Picture Example 1</figcaption>
+</figure>
+<h2 id="picture-from-inside">Picture from inside</h2>
+<figure>
+<img src="/uploads/vim-sheet.jpg" alt><figcaption>Picture Example 2</figcaption>
+</figure>
+<h2 id="quotation">Quotation</h2>
+<blockquote>
+<p>Someone told somebody something</p>
+</blockquote>
+<hr>
+<h1 id="bold-and-italic">Bold and Italic</h1>
+<ul>
+<li><em>Italic</em></li>
+<li><strong>Bold</strong></li>
+</ul>
+<hr>
+<h1 id="table">Table</h1>
+<h2 id="table-example-1">Table Example 1</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Tables</th>
+<th style="text-align: center;">Are</th>
+<th style="text-align: right;">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>col 3 is</td>
+<td style="text-align: center;">right-aligned</td>
+<td style="text-align: right;">1600</td>
+</tr>
+<tr class="even">
+<td>col 2 is</td>
+<td style="text-align: center;">centered</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr class="odd">
+<td>zebra stripes</td>
+<td style="text-align: center;">are neat</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="table-example-2">Table Example 2</h2>
+<table>
+<thead>
+<tr class="header">
+<th>dog</th>
+<th>bird</th>
+<th>cat</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>foo</td>
+<td>foo</td>
+<td>foo</td>
+</tr>
+<tr class="even">
+<td>bar</td>
+<td>bar</td>
+<td>bar</td>
+</tr>
+<tr class="odd">
+<td>baz</td>
+<td>baz</td>
+<td>baz</td>
+</tr>
+</tbody>
+</table>
+<h2 id="table-example-3">Table Example 3</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>System</th>
+<th>IP</th>
+<th>Hostname</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>salt100</td>
+<td>CentOS7.5</td>
+<td>172.16.1.100</td>
+<td>10.0.0.100</td>
+</tr>
+<tr class="even">
+<td>salt01</td>
+<td>CentOS7.5</td>
+<td>172.16.1.11</td>
+<td>10.0.0.11</td>
+</tr>
+<tr class="odd">
+<td>salt02</td>
+<td>CentOS7.5</td>
+<td>172.16.1.12</td>
+<td>10.0.0.12</td>
+</tr>
+<tr class="even">
+<td>salt03</td>
+<td>CentOS7.5</td>
+<td>172.16.1.13</td>
+<td>10.0.0.13</td>
+</tr>
+</tbody>
+</table>
+<hr>
+]]></content>
+      <categories>
+        <category>MarkDown</category>
+      </categories>
+      <tags>
+        <tag>MarkDown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2019/09/12/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+</search>
