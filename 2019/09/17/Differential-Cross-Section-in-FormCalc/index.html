@@ -269,7 +269,7 @@
                 
               
 
-              <time title="Created: 2019-09-17 14:29:50" itemprop="dateCreated datePublished" datetime="2019-09-17T14:29:50+08:00">2019-09-17</time>
+              <time title="Created: 2019-09-17 14:29:50" itemprop="dateCreated datePublished" datetime="2019-09-17T14:29:50-04:00">2019-09-17</time>
             </span>
           
             
@@ -280,7 +280,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-09-23 04:52:48" itemprop="dateModified" datetime="2019-09-23T04:52:48+08:00">2019-09-23</time>
+                <time title="Modified: 2019-09-22 16:52:48" itemprop="dateModified" datetime="2019-09-22T16:52:48-04:00">2019-09-22</time>
               </span>
             
           
@@ -306,6 +306,20 @@
           
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2019/09/17/Differential-Cross-Section-in-FormCalc/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/2019/09/17/Differential-Cross-Section-in-FormCalc/" itemprop="commentCount"></span></a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -403,8 +417,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/13/hello-world/" rel="next" title="Hello World">
-                  <i class="fa fa-chevron-left"></i> Hello World
+                <a href="/2019/09/12/MarkDown-Use-Guide/" rel="next" title="MarkDown Use Guide">
+                  <i class="fa fa-chevron-left"></i> MarkDown Use Guide
                 </a>
               
             </div>
@@ -433,6 +447,9 @@
 
           </div>
           
+    
+    <div class="comments" id="comments"></div>
+  
 
         </div>
           
@@ -682,6 +699,31 @@
   
 
   
+
+
+<script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'JxqzssypJW6HDs18RSeURyBR-gzGzoHsz',
+    appKey: 'cUk0YbapDVK9NWW3DyMaJCbw',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: 'en, zh-cn' || 'zh-cn',
+    path: location.pathname
+  });
+}, window.Valine);
+</script>
 
 </body>
 </html>

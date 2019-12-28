@@ -272,7 +272,7 @@
                 
               
 
-              <time title="Created: 2019-11-24 17:16:46 / Modified: 18:08:59" itemprop="dateCreated datePublished" datetime="2019-11-24T17:16:46+08:00">2019-11-24</time>
+              <time title="Created: 2019-11-24 17:16:46 / Modified: 05:08:59" itemprop="dateCreated datePublished" datetime="2019-11-24T17:16:46-05:00">2019-11-24</time>
             </span>
           
             
@@ -301,6 +301,20 @@
           
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2019/11/24/Matplotlib-plt-ax-figure/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/2019/11/24/Matplotlib-plt-ax-figure/" itemprop="commentCount"></span></a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -422,6 +436,9 @@
 
           </div>
           
+    
+    <div class="comments" id="comments"></div>
+  
 
         </div>
           
@@ -621,6 +638,31 @@
   
 
   
+
+
+<script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'JxqzssypJW6HDs18RSeURyBR-gzGzoHsz',
+    appKey: 'cUk0YbapDVK9NWW3DyMaJCbw',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: 'en, zh-cn' || 'zh-cn',
+    path: location.pathname
+  });
+}, window.Valine);
+</script>
 
 </body>
 </html>
