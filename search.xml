@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Matplotlib Colors</title>
+    <url>/2020/01/17/Matplotlib-Colors/</url>
+    <content><![CDATA[<h1 id="the-colors-in-matplotlib">The Colors in Matplotlib</h1><a id="more"></a>
+<p><img src="/uploads/15793000241415.jpg"></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Coding</category>
+        <category>Plot</category>
+      </categories>
+      <tags>
+        <tag>Matplotlib</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux Useful Commands</title>
     <url>/2020/01/14/Linux-Useful-Commands/</url>
     <content><![CDATA[<h1 id="zipunzip-files">Zip/Unzip Files</h1><a id="more"></a>
