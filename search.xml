@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Regular Expressions</title>
+    <url>/2020/01/18/Regular-Expressions/</url>
+    <content><![CDATA[<h1 id="regular-expressions">Regular Expressions</h1><a id="more"></a>
+<h2 id="basic-rules">Basic Rules</h2>
+<ul>
+<li><code>\d</code> match one number</li>
+<li><code>\w</code> match one letter or one number</li>
+<li><code>\s</code> match one space (also include tab)</li>
+<li><code>.</code> match any symbol</li>
+<li><code>*</code> match any number of symbols (include zero)</li>
+<li><code>+</code> match at least one symbol</li>
+<li><code>?</code> match one or none symbol</li>
+<li><code>{n}</code> means n symbols</li>
+<li><code>{n,m}</code> means n to m symbols</li>
+</ul>
+<h2 id="advanced-rules">Advanced Rules</h2>
+<ul>
+<li><code>[]</code> can be used to indicate range
+<ul>
+<li><code>[0-9a-zA-Z\_]</code> matches one number or letter or underscore</li>
+<li><code>[0-9a-zA-Z\_]+</code> matches one string containing at least one number, letter or underscore.</li>
+<li><code>[a-zA-Z\_][0-9a-zA-Z\_]*</code> matches any string starting with letter or underscore followed by any number of number/letter/underscore</li>
+<li><code>[a-zA-Z\_][0-9a-zA-Z\_]{0,19}</code> specify the length of the string</li>
+</ul></li>
+<li><code>A|B</code> match A or B</li>
+<li><code>^</code> means the header</li>
+<li><code>$</code> means the end</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Coding</category>
+      </categories>
+      <tags>
+        <tag>Regular Expressions</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Matplotlib Colors</title>
     <url>/2020/01/17/Matplotlib-Colors/</url>
     <content><![CDATA[<h1 id="the-colors-in-matplotlib">The Colors in Matplotlib</h1><a id="more"></a>

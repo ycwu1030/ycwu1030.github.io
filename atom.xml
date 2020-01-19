@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ycwu1030.github.io/"/>
-  <updated>2020-01-17T22:27:20.395Z</updated>
+  <updated>2020-01-18T23:36:12.404Z</updated>
   <id>https://ycwu1030.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Regular Expressions</title>
+    <link href="https://ycwu1030.github.io/2020/01/18/Regular-Expressions/"/>
+    <id>https://ycwu1030.github.io/2020/01/18/Regular-Expressions/</id>
+    <published>2020-01-18T22:51:31.000Z</published>
+    <updated>2020-01-18T23:36:12.404Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;regular-expressions&quot;&gt;Regular Expressions&lt;/h1&gt;
+    
+    </summary>
+    
+    
+      <category term="Coding" scheme="https://ycwu1030.github.io/categories/Coding/"/>
+    
+    
+      <category term="Regular Expressions" scheme="https://ycwu1030.github.io/tags/Regular-Expressions/"/>
+    
+  </entry>
   
   <entry>
     <title>Matplotlib Colors</title>

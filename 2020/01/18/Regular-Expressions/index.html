@@ -56,17 +56,19 @@
   };
 </script>
 
-  <meta name="description" content="Life in Physics">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yongcheng Wu&#39;s Blog">
-<meta property="og:url" content="https://ycwu1030.github.io/archives/index.html">
+  <meta name="description" content="Regular Expressions">
+<meta name="keywords" content="Regular Expressions">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Regular Expressions">
+<meta property="og:url" content="https://ycwu1030.github.io/2020/01/18/Regular-Expressions/index.html">
 <meta property="og:site_name" content="Yongcheng Wu&#39;s Blog">
-<meta property="og:description" content="Life in Physics">
+<meta property="og:description" content="Regular Expressions">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-01-18T23:36:12.404Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yongcheng Wu&#39;s Blog">
-<meta name="twitter:description" content="Life in Physics">
-  <link rel="canonical" href="https://ycwu1030.github.io/archives/">
+<meta name="twitter:title" content="Regular Expressions">
+<meta name="twitter:description" content="Regular Expressions">
+  <link rel="canonical" href="https://ycwu1030.github.io/2020/01/18/Regular-Expressions/">
 
 
 <script id="page-configurations">
@@ -74,13 +76,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
+    isPost: true,
     isPage: false,
-    isArchive: true
+    isArchive: false
   };
 </script>
 
-  <title>Archive | Yongcheng Wu's Blog</title>
+  <title>Regular Expressions | Yongcheng Wu's Blog</title>
   
 
 
@@ -257,276 +259,216 @@
         <div class="content-wrap">
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        
-        
-        
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://ycwu1030.github.io/2020/01/18/Regular-Expressions/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yongcheng Wu">
+      <meta itemprop="description" content="Life in Physics">
+      <meta itemprop="image" content="/images/ycwu.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yongcheng Wu's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Regular Expressions
+
           
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2020-01-18 17:51:31 / Modified: 18:36:12" itemprop="dateCreated datePublished" datetime="2020-01-18T17:51:31-05:00">2020-01-18</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Coding/" itemprop="url" rel="index"><span itemprop="name">Coding</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            <span class="post-meta-item" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
         
-        <span class="collection-header">Um..! 7 posts in total. Keep on posting.</span>
+      
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2020/01/18/Regular-Expressions/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/2020/01/18/Regular-Expressions/" itemprop="commentCount"></span></a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="regular-expressions">Regular Expressions</h1><a id="more"></a>
+<h2 id="basic-rules">Basic Rules</h2>
+<ul>
+<li><code>\d</code> match one number</li>
+<li><code>\w</code> match one letter or one number</li>
+<li><code>\s</code> match one space (also include tab)</li>
+<li><code>.</code> match any symbol</li>
+<li><code>*</code> match any number of symbols (include zero)</li>
+<li><code>+</code> match at least one symbol</li>
+<li><code>?</code> match one or none symbol</li>
+<li><code>{n}</code> means n symbols</li>
+<li><code>{n,m}</code> means n to m symbols</li>
+</ul>
+<h2 id="advanced-rules">Advanced Rules</h2>
+<ul>
+<li><code>[]</code> can be used to indicate range
+<ul>
+<li><code>[0-9a-zA-Z\_]</code> matches one number or letter or underscore</li>
+<li><code>[0-9a-zA-Z\_]+</code> matches one string containing at least one number, letter or underscore.</li>
+<li><code>[a-zA-Z\_][0-9a-zA-Z\_]*</code> matches any string starting with letter or underscore followed by any number of number/letter/underscore</li>
+<li><code>[a-zA-Z\_][0-9a-zA-Z\_]{0,19}</code> specify the length of the string</li>
+</ul></li>
+<li><code>A|B</code> match A or B</li>
+<li><code>^</code> means the header</li>
+<li><code>$</code> means the end</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+        
+      
+        <div id="reward-container">
+  <div>Thanks for Your Supports.</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechat.jpeg" alt="Yongcheng Wu WeChat Pay">
+        <p>WeChat Pay</p>
       </div>
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/Alipay.jpeg" alt="Yongcheng Wu Alipay">
+        <p>Alipay</p>
+      </div>
+
+  </div>
+</div>
+
+      
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Yongcheng Wu</li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="https://ycwu1030.github.io/2020/01/18/Regular-Expressions/" title="Regular Expressions">https://ycwu1030.github.io/2020/01/18/Regular-Expressions/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/en" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.</li>
+</ul>
+</div>
+
       
 
-      
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/Regular-Expressions/" rel="tag"># Regular Expressions</a>
+            
+          </div>
+        
 
-  
-  
+        
 
-  
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2020/01/17/Matplotlib-Colors/" rel="next" title="Matplotlib Colors">
+                  <i class="fa fa-chevron-left"></i> Matplotlib Colors
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
     
-    <div class="collection-year">
-      <h1 class="collection-header">2020</h1>
-    </div>
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2020/01/18/Regular-Expressions/" itemprop="url">
-            <span itemprop="name">Regular Expressions</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-01-18T17:51:31-05:00"
-              content="2020-01-18">
-          01-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2020/01/17/Matplotlib-Colors/" itemprop="url">
-            <span itemprop="name">Matplotlib Colors</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-01-17T17:24:25-05:00"
-              content="2020-01-17">
-          01-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2020/01/14/Linux-Useful-Commands/" itemprop="url">
-            <span itemprop="name">Linux Useful Commands</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-01-14T11:13:13-05:00"
-              content="2020-01-14">
-          01-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-    
-    <div class="collection-year">
-      <h1 class="collection-header">2019</h1>
-    </div>
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/11/24/Matplotlib-plt-ax-figure/" itemprop="url">
-            <span itemprop="name">Difference between `plt` `ax` and `figure` in Matplotlib</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-11-24T17:16:46-05:00"
-              content="2019-11-24">
-          11-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/17/Differential-Cross-Section-in-FormCalc/" itemprop="url">
-            <span itemprop="name">Differential Cross Section in FormCalc</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-17T14:29:50-04:00"
-              content="2019-09-17">
-          09-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/12/MarkDown-Use-Guide/" itemprop="url">
-            <span itemprop="name">MarkDown Use Guide</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-12T14:42:23-04:00"
-              content="2019-09-12">
-          09-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/12/hello-world/" itemprop="url">
-            <span itemprop="name">Hello World</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-12T14:31:42-04:00"
-              content="2019-09-12">
-          09-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-
-    </div>
   </div>
   
   
   
+  </article>
 
-  
-
+  </div>
 
 
           </div>
           
+    
+    <div class="comments" id="comments"></div>
+  
 
         </div>
           
@@ -541,6 +483,11 @@
 
   <aside class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -553,6 +500,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#regular-expressions"><span class="nav-number">1.</span> <span class="nav-text">Regular Expressions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#basic-rules"><span class="nav-number">1.1.</span> <span class="nav-text">Basic Rules</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#advanced-rules"><span class="nav-number">1.2.</span> <span class="nav-text">Advanced Rules</span></a></li></ol></li></ol></div>
+        
       </div>
       <!--/noindex-->
 
