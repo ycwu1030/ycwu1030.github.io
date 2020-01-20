@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Shallow and Deep Copy in Python</title>
+    <url>/2020/01/19/Shallow-and-Deep-Copy-in-Python/</url>
+    <content><![CDATA[<h1 id="assignment-shallow-copy-copy-and-deep-copy">Assignment, Shallow Copy (Copy) and Deep Copy</h1><a id="more"></a>
+<ul>
+<li>Assignment: Just add one more reference to the origin object</li>
+<li>Shallow Copy: Or just Copy, which will just copy top level object, but will not copy sub-level object (add one more reference for sub-level object)</li>
+<li>Deep Copy: Completely copy the whole object</li>
+</ul>
+<h1 id="example-using-dictionary">Example using dictionary</h1>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;<span class="keyword">import</span> copy</span><br><span class="line">&gt;&gt;&gt;a = &#123;<span class="number">1</span>: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]&#125;</span><br><span class="line">&gt;&gt;&gt;b = a.copy() <span class="comment"># Shallow Copy</span></span><br><span class="line">&gt;&gt;&gt;a, b</span><br><span class="line">&gt;&gt;&gt;(&#123;<span class="number">1</span>: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]&#125;,&#123;<span class="number">1</span>: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]&#125;)</span><br><span class="line">&gt;&gt;&gt;a[<span class="number">1</span>].append(<span class="number">4</span>)</span><br><span class="line">&gt;&gt;&gt;a, b</span><br><span class="line">&gt;&gt;&gt;(&#123;<span class="number">1</span>: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]&#125;,&#123;<span class="number">1</span>:[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]&#125;)</span><br><span class="line">&gt;&gt;&gt;c = copy.deepcopy(a) <span class="comment"># deep copy</span></span><br><span class="line">&gt;&gt;&gt;a, c</span><br><span class="line">&gt;&gt;&gt;(&#123;<span class="number">1</span>: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]&#125;,&#123;<span class="number">1</span>:[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]&#125;)</span><br><span class="line">&gt;&gt;&gt;a[<span class="number">1</span>].append(<span class="number">5</span>)</span><br><span class="line">&gt;&gt;&gt;a, c</span><br><span class="line">&gt;&gt;&gt;(&#123;<span class="number">1</span>: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]&#125;,&#123;<span class="number">1</span>: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="explanation">Explanation</h2>
+<ol type="1">
+<li><code>b=a</code>: assignment, <code>a</code> and <code>b</code> will point to the same object
+<ul>
+<li><img src="/uploads/15794926104953.jpg" title="fig:" alt="-w427"></li>
+</ul></li>
+<li><code>b=a.copy()</code>: shallow copy, <code>a</code> and <code>b</code> are independent object, however, their sub-objects still point to the same object.
+<ul>
+<li><img src="/uploads/15794926512885.jpg" title="fig:" alt="-w454"></li>
+</ul></li>
+<li><code>b=a.deepcopy()</code>: deep copy, <code>a</code> and <code>b</code> are totally independent object, at any level.
+<ul>
+<li><img src="/uploads/15794927525585.jpg" title="fig:" alt="-w489"></li>
+</ul></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Coding</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Regular Expressions</title>
     <url>/2020/01/18/Regular-Expressions/</url>
     <content><![CDATA[<h1 id="regular-expressions">Regular Expressions</h1><a id="more"></a>
@@ -44,8 +78,8 @@
 <p><img src="/uploads/15793000241415.jpg"></p>
 ]]></content>
       <categories>
-        <category>Python</category>
         <category>Coding</category>
+        <category>Python</category>
         <category>Plot</category>
       </categories>
       <tags>

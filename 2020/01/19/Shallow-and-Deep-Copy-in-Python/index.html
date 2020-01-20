@@ -56,17 +56,23 @@
   };
 </script>
 
-  <meta name="description" content="Life in Physics">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yongcheng Wu&#39;s Blog">
-<meta property="og:url" content="https://ycwu1030.github.io/archives/index.html">
+  <meta name="description" content="Assignment, Shallow Copy (Copy) and Deep Copy">
+<meta name="keywords" content="Coding">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shallow and Deep Copy in Python">
+<meta property="og:url" content="https://ycwu1030.github.io/2020/01/19/Shallow-and-Deep-Copy-in-Python/index.html">
 <meta property="og:site_name" content="Yongcheng Wu&#39;s Blog">
-<meta property="og:description" content="Life in Physics">
+<meta property="og:description" content="Assignment, Shallow Copy (Copy) and Deep Copy">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://ycwu1030.github.io/uploads/15794926104953.jpg">
+<meta property="og:image" content="https://ycwu1030.github.io/uploads/15794926512885.jpg">
+<meta property="og:image" content="https://ycwu1030.github.io/uploads/15794927525585.jpg">
+<meta property="og:updated_time" content="2020-01-20T04:00:07.112Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yongcheng Wu&#39;s Blog">
-<meta name="twitter:description" content="Life in Physics">
-  <link rel="canonical" href="https://ycwu1030.github.io/archives/">
+<meta name="twitter:title" content="Shallow and Deep Copy in Python">
+<meta name="twitter:description" content="Assignment, Shallow Copy (Copy) and Deep Copy">
+<meta name="twitter:image" content="https://ycwu1030.github.io/uploads/15794926104953.jpg">
+  <link rel="canonical" href="https://ycwu1030.github.io/2020/01/19/Shallow-and-Deep-Copy-in-Python/">
 
 
 <script id="page-configurations">
@@ -74,13 +80,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
+    isPost: true,
     isPage: false,
-    isArchive: true
+    isArchive: false
   };
 </script>
 
-  <title>Archive | Yongcheng Wu's Blog</title>
+  <title>Shallow and Deep Copy in Python | Yongcheng Wu's Blog</title>
   
 
 
@@ -257,305 +263,213 @@
         <div class="content-wrap">
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        
-        
-        
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://ycwu1030.github.io/2020/01/19/Shallow-and-Deep-Copy-in-Python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yongcheng Wu">
+      <meta itemprop="description" content="Life in Physics">
+      <meta itemprop="image" content="/images/ycwu.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yongcheng Wu's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Shallow and Deep Copy in Python
+
           
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2020-01-19 21:43:34 / Modified: 23:00:07" itemprop="dateCreated datePublished" datetime="2020-01-19T21:43:34-05:00">2020-01-19</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            <span class="post-meta-item" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
         
-        <span class="collection-header">Um..! 8 posts in total. Keep on posting.</span>
+      
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2020/01/19/Shallow-and-Deep-Copy-in-Python/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/2020/01/19/Shallow-and-Deep-Copy-in-Python/" itemprop="commentCount"></span></a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="assignment-shallow-copy-copy-and-deep-copy">Assignment, Shallow Copy (Copy) and Deep Copy</h1><a id="more"></a>
+<ul>
+<li>Assignment: Just add one more reference to the origin object</li>
+<li>Shallow Copy: Or just Copy, which will just copy top level object, but will not copy sub-level object (add one more reference for sub-level object)</li>
+<li>Deep Copy: Completely copy the whole object</li>
+</ul>
+<h1 id="example-using-dictionary">Example using dictionary</h1>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;<span class="keyword">import</span> copy</span><br><span class="line">&gt;&gt;&gt;a = &#123;<span class="number">1</span>: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]&#125;</span><br><span class="line">&gt;&gt;&gt;b = a.copy() <span class="comment"># Shallow Copy</span></span><br><span class="line">&gt;&gt;&gt;a, b</span><br><span class="line">&gt;&gt;&gt;(&#123;<span class="number">1</span>: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]&#125;,&#123;<span class="number">1</span>: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]&#125;)</span><br><span class="line">&gt;&gt;&gt;a[<span class="number">1</span>].append(<span class="number">4</span>)</span><br><span class="line">&gt;&gt;&gt;a, b</span><br><span class="line">&gt;&gt;&gt;(&#123;<span class="number">1</span>: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]&#125;,&#123;<span class="number">1</span>:[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]&#125;)</span><br><span class="line">&gt;&gt;&gt;c = copy.deepcopy(a) <span class="comment"># deep copy</span></span><br><span class="line">&gt;&gt;&gt;a, c</span><br><span class="line">&gt;&gt;&gt;(&#123;<span class="number">1</span>: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]&#125;,&#123;<span class="number">1</span>:[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]&#125;)</span><br><span class="line">&gt;&gt;&gt;a[<span class="number">1</span>].append(<span class="number">5</span>)</span><br><span class="line">&gt;&gt;&gt;a, c</span><br><span class="line">&gt;&gt;&gt;(&#123;<span class="number">1</span>: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]&#125;,&#123;<span class="number">1</span>: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="explanation">Explanation</h2>
+<ol type="1">
+<li><code>b=a</code>: assignment, <code>a</code> and <code>b</code> will point to the same object
+<ul>
+<li><img src="/uploads/15794926104953.jpg" title="fig:" alt="-w427"></li>
+</ul></li>
+<li><code>b=a.copy()</code>: shallow copy, <code>a</code> and <code>b</code> are independent object, however, their sub-objects still point to the same object.
+<ul>
+<li><img src="/uploads/15794926512885.jpg" title="fig:" alt="-w454"></li>
+</ul></li>
+<li><code>b=a.deepcopy()</code>: deep copy, <code>a</code> and <code>b</code> are totally independent object, at any level.
+<ul>
+<li><img src="/uploads/15794927525585.jpg" title="fig:" alt="-w489"></li>
+</ul></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+        
+      
+        <div id="reward-container">
+  <div>Thanks for Your Supports.</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechat.jpeg" alt="Yongcheng Wu WeChat Pay">
+        <p>WeChat Pay</p>
       </div>
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/Alipay.jpeg" alt="Yongcheng Wu Alipay">
+        <p>Alipay</p>
+      </div>
+
+  </div>
+</div>
+
+      
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Yongcheng Wu</li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="https://ycwu1030.github.io/2020/01/19/Shallow-and-Deep-Copy-in-Python/" title="Shallow and Deep Copy in Python">https://ycwu1030.github.io/2020/01/19/Shallow-and-Deep-Copy-in-Python/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/en" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.</li>
+</ul>
+</div>
+
       
 
-      
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/Coding/" rel="tag"># Coding</a>
+            
+          </div>
+        
 
-  
-  
+        
 
-  
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2020/01/18/Regular-Expressions/" rel="next" title="Regular Expressions">
+                  <i class="fa fa-chevron-left"></i> Regular Expressions
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
     
-    <div class="collection-year">
-      <h1 class="collection-header">2020</h1>
-    </div>
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2020/01/19/Shallow-and-Deep-Copy-in-Python/" itemprop="url">
-            <span itemprop="name">Shallow and Deep Copy in Python</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-01-19T21:43:34-05:00"
-              content="2020-01-19">
-          01-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2020/01/18/Regular-Expressions/" itemprop="url">
-            <span itemprop="name">Regular Expressions</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-01-18T17:51:31-05:00"
-              content="2020-01-18">
-          01-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2020/01/17/Matplotlib-Colors/" itemprop="url">
-            <span itemprop="name">Matplotlib Colors</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-01-17T17:24:25-05:00"
-              content="2020-01-17">
-          01-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2020/01/14/Linux-Useful-Commands/" itemprop="url">
-            <span itemprop="name">Linux Useful Commands</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-01-14T11:13:13-05:00"
-              content="2020-01-14">
-          01-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-    
-    <div class="collection-year">
-      <h1 class="collection-header">2019</h1>
-    </div>
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/11/24/Matplotlib-plt-ax-figure/" itemprop="url">
-            <span itemprop="name">Difference between `plt` `ax` and `figure` in Matplotlib</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-11-24T17:16:46-05:00"
-              content="2019-11-24">
-          11-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/17/Differential-Cross-Section-in-FormCalc/" itemprop="url">
-            <span itemprop="name">Differential Cross Section in FormCalc</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-17T14:29:50-04:00"
-              content="2019-09-17">
-          09-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/12/MarkDown-Use-Guide/" itemprop="url">
-            <span itemprop="name">MarkDown Use Guide</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-12T14:42:23-04:00"
-              content="2019-09-12">
-          09-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/12/hello-world/" itemprop="url">
-            <span itemprop="name">Hello World</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-12T14:31:42-04:00"
-              content="2019-09-12">
-          09-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-
-    </div>
   </div>
   
   
   
+  </article>
 
-  
-
+  </div>
 
 
           </div>
           
+    
+    <div class="comments" id="comments"></div>
+  
 
         </div>
           
@@ -570,6 +484,11 @@
 
   <aside class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -582,6 +501,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#assignment-shallow-copy-copy-and-deep-copy"><span class="nav-number">1.</span> <span class="nav-text">Assignment, Shallow Copy (Copy) and Deep Copy</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#example-using-dictionary"><span class="nav-number">2.</span> <span class="nav-text">Example using dictionary</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#explanation"><span class="nav-number">2.1.</span> <span class="nav-text">Explanation</span></a></li></ol></li></ol></div>
+        
       </div>
       <!--/noindex-->
 

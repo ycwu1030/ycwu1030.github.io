@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ycwu1030.github.io/"/>
-  <updated>2020-01-18T23:36:12.404Z</updated>
+  <updated>2020-01-20T04:00:07.112Z</updated>
   <id>https://ycwu1030.github.io/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Shallow and Deep Copy in Python</title>
+    <link href="https://ycwu1030.github.io/2020/01/19/Shallow-and-Deep-Copy-in-Python/"/>
+    <id>https://ycwu1030.github.io/2020/01/19/Shallow-and-Deep-Copy-in-Python/</id>
+    <published>2020-01-20T02:43:34.000Z</published>
+    <updated>2020-01-20T04:00:07.112Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;assignment-shallow-copy-copy-and-deep-copy&quot;&gt;Assignment, Shallow Copy (Copy) and Deep Copy&lt;/h1&gt;
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="https://ycwu1030.github.io/categories/Python/"/>
+    
+    
+      <category term="Coding" scheme="https://ycwu1030.github.io/tags/Coding/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Regular Expressions</title>
     <link href="https://ycwu1030.github.io/2020/01/18/Regular-Expressions/"/>
     <id>https://ycwu1030.github.io/2020/01/18/Regular-Expressions/</id>
     <published>2020-01-18T22:51:31.000Z</published>
-    <updated>2020-01-18T23:36:12.404Z</updated>
+    <updated>2020-01-20T02:45:21.002Z</updated>
     
     <summary type="html">
     
@@ -42,7 +63,7 @@
     <link href="https://ycwu1030.github.io/2020/01/17/Matplotlib-Colors/"/>
     <id>https://ycwu1030.github.io/2020/01/17/Matplotlib-Colors/</id>
     <published>2020-01-17T22:24:25.000Z</published>
-    <updated>2020-01-17T22:27:20.395Z</updated>
+    <updated>2020-01-20T02:45:20.830Z</updated>
     
     <summary type="html">
     
@@ -51,11 +72,11 @@
     </summary>
     
     
+      <category term="Coding" scheme="https://ycwu1030.github.io/categories/Coding/"/>
+    
       <category term="Python" scheme="https://ycwu1030.github.io/categories/Python/"/>
     
-      <category term="Coding" scheme="https://ycwu1030.github.io/categories/Python/Coding/"/>
-    
-      <category term="Plot" scheme="https://ycwu1030.github.io/categories/Python/Coding/Plot/"/>
+      <category term="Plot" scheme="https://ycwu1030.github.io/categories/Plot/"/>
     
     
       <category term="Matplotlib" scheme="https://ycwu1030.github.io/tags/Matplotlib/"/>
