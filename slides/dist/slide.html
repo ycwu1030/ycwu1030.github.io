@@ -1,0 +1,18 @@
+<!doctype html><html><head><meta charset=UTF-8><title>Usage of Noteppt - By Yongcheng Wu</title><link rel=stylesheet href=//cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css><link rel=stylesheet href=//cdn.staticfile.org/prism/1.15.0/themes/prism.min.css><link rel=stylesheet href=//cdn.staticfile.org/KaTeX/0.10.0-rc.1/katex.min.css><link href=./css/chunk-vendors.4e4765ff.css rel=stylesheet></head><body><div><article id=webslides><section slide class="slide bg-black-blue aligncenter" image="https://source.unsplash.com/C1HhAQrbykQ/ .dark"><span class="background dark" style="background-image:url('https://source.unsplash.com/C1HhAQrbykQ/')"></span><div class=wrap wrap=true><h1 class="text-landing text-shadow">Usage of Noteppt</h1><p class=text-intro>By Yongcheng Wu</p><p><a href=https://github.com/ycwu1030 class="button ghost" target=_blank><i class="fa fa-github"></i> Github</a></p></div></section><section slide class="slide bg-black-blue"><div class=wrap wrap=true><h1>Outlines</h1><ul><li>Text Classes</li></ul></div></section><section slide class="slide bg-light"><div class=wrap wrap=true><h1>Text Classes</h1><h2>Typography</h2><p class=text-landing>Effect of <code>.text-landing</code></p><p class=text-intro>Effect of <code>.text-intro</code></p><p class=text-subtitle>Effect of <code>.text-subtitle</code></p><p class="text-landing text-shadow">Effect of <code>.text-shadow</code></p><p class=text-context>Effect of <code>.text-context</code></p></div></section><section slide class="slide bg-apple"><div class=wrap wrap=true><h1>Text Classes</h1><h2>Typography (continue)</h2><p>Example of <code>.text-cols</code></p><div class=text-cols><p><strong>Why WebSlides?</strong></p><p><strong>WebSlides help you build a culture of innovation and excellence</strong>.</p></div></div></section></article></div><script src=//cdn.staticfile.org/echarts/4.1.0-release/echarts.min.js></script><script>window.pluginsOptions = {}
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    let isPrintMode = false;
+    if(~location.search.indexOf('print-pdf')){
+        isPrintMode = true;
+        WebSlides.registerPlugin('scroll', function(){});
+    }
+    const ws = new WebSlides({
+        loop: false
+    })
+    window.wsInstance = ws;
+    if(isPrintMode){
+        ws.slides.forEach(s=>s.show())
+    }
+}, false)</script><script src=./js/chunk-vendors.js></script><script src=./js/slide.js></script></body></html>
